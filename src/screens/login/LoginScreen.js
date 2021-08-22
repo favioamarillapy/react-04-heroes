@@ -1,9 +1,22 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Button } from 'react-bootstrap';
+import { actions } from '../../actions/actions';
+import { AuthContext } from '../../auth/AuthContext';
 
-export const LoginScreen = ({history}) => {
+export const LoginScreen = ({ history }) => {
+
+    const { dispatch } = useContext(AuthContext);
+
+    useEffect(() => {
+        localStorage.removeItem('user');
+    }, []);
 
     const signIn = () => {
+        dispatch({
+            type: actions.login,
+            payload: { name: 'Favio' }
+        });
+
         history.replace('/');
     }
 

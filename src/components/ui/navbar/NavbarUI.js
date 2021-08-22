@@ -1,9 +1,24 @@
-import React from 'react'
-import { Navbar, Nav, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react'
+import { Navbar, Nav, Container, Button } from 'react-bootstrap';
+import { Link, useHistory } from 'react-router-dom';
+import { actions } from '../../../actions/actions';
+import { AuthContext } from '../../../auth/AuthContext';
 
 
 export const NavbarUI = () => {
+
+    const { user: { name }, dispatch } = useContext(AuthContext);
+
+    const history = useHistory()
+
+    const handleLogout = () => {
+        history.replace('/login');
+
+        dispatch({
+            type: actions.logout
+        });
+    }
+
     return (
         <Navbar bg="dark" fixed="top" variant="dark">
             <Container>
@@ -25,10 +40,18 @@ export const NavbarUI = () => {
                     </Nav.Link>
                 </Nav>
 
+                <Nav className="text-info">
+                    {name}
+                </Nav>
+
                 <Nav>
-                    <Nav.Link as={Link} to="/login">
+                    <Button
+                        variant="primary"
+                        onClick={handleLogout}
+                        style={{ backgroundColor: 'transparent', borderColor: 'transparent' }}
+                    >
                         Logout
-                    </Nav.Link>
+                    </Button>
                 </Nav>
 
             </Container>
