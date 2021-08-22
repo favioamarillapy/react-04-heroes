@@ -32,7 +32,11 @@ export const HeroScreen = ({ history }) => {
             <hr />
             <Row>
                 <Col key={hero.id} md={3} style={{ marginBottom: 20 }}>
-                    <Image src={`../assets/heroes/${id}.jpg`} rounded height={500} />
+                    <Image
+                        className="animate__animated animate__fadeInLeft"
+                        src={`../assets/heroes/${id}.jpg`}
+                        rounded
+                        height={500} />
                 </Col>
                 <Col key={hero.id} md={9} style={{ marginBottom: 20, paddingLeft: 30 }}>
                     <p><strong>Publisher: </strong>{publisher}</p>

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export const HeroCard = ({ id, superhero, characters }) => {
     return (
-        <Card style={{ width: '18rem', height: '100%' }}>
+        <Card className="animate__animated animate__fadeIn" style={{ width: '18rem', height: '100%' }}>
             <Card.Img variant="top"
                 style={{ height: 250 }}
                 src={`assets/heroes/${id}.jpg`} />
