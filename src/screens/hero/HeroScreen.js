@@ -32,7 +32,7 @@ export const HeroScreen = ({ history }) => {
             <hr />
             <Row>
                 <Col key={hero.id} md={3} style={{ marginBottom: 20 }}
-                    className="animate__animated animate__fadeIn">
+                    className="animate__animated animate__fadeInLeft">
                     <Image
                         src={`../assets/heroes/${id}.jpg`}
                         rounded
