@@ -6,10 +6,7 @@ import { AuthContext } from '../../auth/AuthContext';
 export const LoginScreen = ({ history }) => {
 
     const { dispatch } = useContext(AuthContext);
-
-    useEffect(() => {
-        localStorage.removeItem('user');
-    }, []);
+    const lastPath = localStorage.getItem('lastPath') || '/'
 
     const signIn = () => {
         dispatch({
@@ -17,7 +14,7 @@ export const LoginScreen = ({ history }) => {
             payload: { name: 'Favio' }
         });
 
-        history.replace('/');
+        history.replace(lastPath);
     }
 
     return (

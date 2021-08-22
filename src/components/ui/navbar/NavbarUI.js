@@ -9,7 +9,7 @@ export const NavbarUI = () => {
 
     const { user: { name }, dispatch } = useContext(AuthContext);
 
-    const history = useHistory()
+    const history = useHistory();
 
     const handleLogout = () => {
         history.replace('/login');
