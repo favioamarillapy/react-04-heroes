@@ -19,6 +19,10 @@ export const NavbarUI = () => {
                     <Nav.Link as={Link} to="/dc">
                         Dc
                     </Nav.Link>
+
+                    <Nav.Link as={Link} to="/search">
+                        Search
+                    </Nav.Link>
                 </Nav>
 
                 <Nav>

@@ -12,6 +12,7 @@ import { DcScreen } from '../screens/dc/DcScreen';
 import { HeroScreen } from '../screens/hero/HeroScreen';
 import { LoginScreen } from '../screens/login/LoginScreen';
 import { NavbarUI } from '../components/ui/navbar/NavbarUI';
+import { SearchScreen } from '../screens/search/SearchScreen';
 
 export const HomeRouter = () => {
     return (
@@ -22,6 +23,7 @@ export const HomeRouter = () => {
                     <Route exact path="/marvel" component={MarvelScreen} />
                     <Route exact path="/dc" component={DcScreen} />
                     <Route exact path="/hero/:id" component={HeroScreen} />
+                    <Route exact path="/search" component={SearchScreen} />
                     <Route exact path="/login" component={LoginScreen} />
 
                     <Redirect to="/marvel" />
