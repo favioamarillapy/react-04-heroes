@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { Col, Row } from "react-bootstrap";
 import { heoresBySelector } from '../../selectors/heoresBySelector';
 import { HeroCard } from './HeroCard';
 
 export const HeroesList = ({ publisher }) => {
 
-    const heroes = heoresBySelector(publisher);
+    const heroes = useMemo(() => heoresBySelector(publisher), [publisher]);
 
 
     return (
