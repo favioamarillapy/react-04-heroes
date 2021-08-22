@@ -9,7 +9,7 @@ import {
 
 import { MarvelScreen } from '../screens/marvel/MarvelScreen';
 import { DcScreen } from '../screens/dc/DcScreen';
-import { HeroeScreen } from '../screens/heroe/HeroeScreen';
+import { HeroScreen } from '../screens/hero/HeroScreen';
 import { LoginScreen } from '../screens/login/LoginScreen';
 import { NavbarUI } from '../components/ui/navbar/NavbarUI';
 
@@ -21,7 +21,7 @@ export const HomeRouter = () => {
                 <Switch>
                     <Route exact path="/marvel" component={MarvelScreen} />
                     <Route exact path="/dc" component={DcScreen} />
-                    <Route exact path="/heroe/:id" component={HeroeScreen} />
+                    <Route exact path="/hero/:id" component={HeroScreen} />
                     <Route exact path="/login" component={LoginScreen} />
 
                     <Redirect to="/marvel" />
