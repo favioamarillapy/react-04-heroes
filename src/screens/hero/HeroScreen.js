@@ -31,14 +31,14 @@ export const HeroScreen = ({ history }) => {
             <h1>{hero.superhero}</h1>
             <hr />
             <Row>
-                <Col key={hero.id} md={3} style={{ marginBottom: 20 }}>
+                <Col key={hero.id} md={3} style={{ marginBottom: 20 }}
+                    className="animate__animated animate__fadeIn">
                     <Image
-                        className="animate__animated animate__fadeInLeft"
                         src={`../assets/heroes/${id}.jpg`}
                         rounded
                         height={500} />
                 </Col>
-                <Col key={hero.id} md={9} style={{ marginBottom: 20, paddingLeft: 30 }}>
+                <Col key={hero.id} md={9} style={{ paddingLeft: 60 }}>
                     <p><strong>Publisher: </strong>{publisher}</p>
                     <p><strong>Alter ego: </strong>{alter_ego}</p>
                     <p><strong>First appearance: </strong>{first_appearance}</p>
